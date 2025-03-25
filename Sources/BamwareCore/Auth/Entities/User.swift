@@ -1,4 +1,4 @@
-public struct User: Entity, Equatable, Codable {
+public struct User: Entity, Equatable, Codable, Sendable {
     public let id: String
     public let tenantID: String
     public let roles: [String]

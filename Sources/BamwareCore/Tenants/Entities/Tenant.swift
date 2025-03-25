@@ -1,5 +1,5 @@
 
-public struct Tenant: Entity, Equatable, Codable {
+public struct Tenant: Entity, Equatable, Codable, Sendable {
     public let id: String
     public let tenantID: String
     
