@@ -1,14 +1,21 @@
-// swift-tools-version: 6.0
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
     name: "BamwareCore",
-    platforms: [.iOS(.v17)],
+    platforms: [.iOS(.v15)],
     products: [
-        .library(name: "BamwareCore", targets: ["BamwareCore"])
+        .library(name: "BamwareCore", targets: ["BamwareCore"]),
     ],
+    dependencies: [],
     targets: [
-        .target(name: "BamwareCore"),
-        .testTarget(name: "BamwareCoreTests", dependencies: ["BamwareCore"])
+        .target(
+            name: "BamwareCore",
+            dependencies: []
+        ),
+        .testTarget(
+            name: "BamwareCoreTests",
+            dependencies: ["BamwareCore"]
+        )
     ]
 )
