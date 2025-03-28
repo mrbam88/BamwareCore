@@ -23,3 +23,9 @@ public final class Container {
         return factory
     }
 }
+
+extension Container {
+    public func resolve<T>(_ type: T.Type) -> T {
+        resolve()
+    }
+}
